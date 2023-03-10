@@ -1,0 +1,22 @@
+{
+  "name": "YouTube Bot",
+  "description": "A Telegram bot that downloads videos from YouTube.",
+  "image": "https://example.com/logo.png",
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "The Telegram bot API token.",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "python setup.py"
+  }
+}
